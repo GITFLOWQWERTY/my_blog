@@ -1,57 +1,71 @@
 # my_blog
 mern 
-  This project was bootstrapped with Create React App.
+  MERN Ecommerce
+Description
 
-  Available Scripts
-  In the project directory, you can run:
+MERN Ecommerce
+Description
+ MERN stack, and utilizes third party API's. This enable three main different flows or implementations:
 
-  npm start
-  Runs the app in the development mode.
-  Open http://localhost:3000 to view it in your browser.
-  The page will reload when you make changes.
-  You may also see any lint errors in the console.
+Node provides the backend environment for this application
+Express middleware is used to handle requests, routes
+Mongoose schemas to model the application data
+React for displaying UI components
+Redux to manage application's state
+Redux Thunk middleware to handle asynchronous redux actions
+Database Seed
+The seed command will create an admin user in the database
+The email and password are passed with the command as arguments
+Like below command, replace brackets with email and password.
+For more information, see code here
+npm run seed:db [email-***@****.com] [password-******] // This is just an example.
 
-  npm test
-  Launches the test runner in the interactive watch mode.
-  See the section about running tests for more information.
 
-  npm run build
-  Builds the app for production to the build folder.
-  It correctly bundles React in production mode and optimizes the build for the best performance.
 
-  The build is minified and the filenames include the hashes.
-  Your app is ready to be deployed!
 
-  See the section about deployment for more information.
+Install
+Some basic Git commands are:
 
-  npm run eject
-  Note: this is a one-way operation. Once you eject, you can't go back!
+$ gh repo clone GITFLOWQWERTY/lad
+$ cd  blog-backend
+$ npm install
+Setup
+ Create .env file that include:
 
-  If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+  * MONGO_URI & JWT_SECRET
+  * PORT & BASE_SERVER_URL & BASE_API_URL & BASE_CLIENT_URL
+  * MAILCHIMP_KEY & MAILCHIMP_LIST_KEY => Mailchimp configuration
+  * MAILGUN_KEY & MAILGUN_DOMAIN & MAILGUN_EMAIL_SENDER => Mailgun configuration
+  * GOOGLE_CLIENT_ID & GOOGLE_CLIENT_SECRET & GOOGLE_CALLBACK_URL => Google Auth configuration
+  * FACEBOOK_CLIENT_ID & FACEBOOK_CLIENT_SECRET & FACEBOOK_CALLBACK_URL => Facebook Auth configuration
+  * AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY & AWS_REGION & AWS_BUCKET_NAME => AWS configuration
+Start development
+$ npm run dev
+Simple build for production
+$ npm run build
+Run build for production
+$ npm start
+Languages & tools
+Node
 
-  Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands     except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-  
-  You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool    wouldn't be useful if you couldn't customize it when you are ready for it.
-  
-   Learn More
-  You can learn more in the Create React App documentation.
+Express
 
-  To learn React, check out the React documentation.
+Mongoose
 
-  Code Splitting
-  This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+React
 
-  Analyzing the Bundle Size
-  This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Webpack
 
-  Making a Progressive Web App
-  This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-  Advanced Configuration
-  This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-  Deployment
-  This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-  npm run build fails to minify
-  This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Code Formatter
+Add a .vscode directory
+Create a file settings.json inside .vscode
+Install Prettier - Code formatter in VSCode
+Add the following snippet:
+    {
+      "editor.formatOnSave": true,
+      "prettier.singleQuote": true,
+      "prettier.arrowParens": "avoid",
+      "prettier.jsxSingleQuote": true,
+      "prettier.trailingComma": "none",
+      "javascript.preferences.quoteStyle": "single",
+    }
